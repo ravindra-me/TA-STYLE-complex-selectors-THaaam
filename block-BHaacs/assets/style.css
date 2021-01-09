@@ -49,7 +49,7 @@ table {
     border-spacing: 0;
 }
 *,*::before,*::after{
-    box-sizing: border-box;
+    box-sizing:border-box;
     padding: 0;
     margin: 0;
 }
@@ -60,7 +60,6 @@ html{
 body{
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
-    margin-bottom: 200px;
 }
 
 :root{
@@ -100,11 +99,17 @@ display: flex;
 .flex-42{
     flex: 0 1 42%;
 }
+.flex-30{
+    flex: 0 1 30%;
+}
 .flex-32{
     flex: 0 1 32%;
 }
 .flex-50{
     flex: 0 1 50%;
+}
+.flex-60{
+    flex: 0 1 60%;
 }
 .full-width{
     width: 100%;
@@ -128,6 +133,7 @@ a{
     font-weight: 500;
     border-radius: 0.25rem;
     color: black;
+    display: inline-block;
 }
 .secondary-heading{
     font-size: 3rem;
@@ -135,8 +141,14 @@ a{
     color: var(--heading-color);
     font-weight: 600;
 }
+.ternary-heading{
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: var(--heading-color);
+    font-weight: 600;
+}
 .text{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--text-color);
     font-weight: 600;
     line-height: 1.5;
@@ -161,7 +173,7 @@ header .container .logo{
 .nav li a:nth-child(n){
     color: white;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 .padding{
     padding: 2rem 0;
@@ -187,7 +199,7 @@ header .container .logo{
 }
 .hero img{
     position: absolute;
-    top: 34.5%;
+    top: 36.5%;
 }
 
 /* file section */
@@ -195,9 +207,8 @@ header .container .logo{
 main section:nth-child(2){
     margin-top: 20rem;
 }
-main section:nth-child(2) div:first-child{
+main section:nth-child(2) .container{
     border-bottom: 3px solid var(--table-font-color);
-    padding: 0;
     padding-bottom: 4rem;
 }
 main section:nth-child(2) a:nth-child(n){
@@ -239,13 +250,16 @@ table caption{
     margin: 1.5rem 0;
     margin-bottom: 2.5rem;
 }
+.table thead tr{
+    border: 2px solid var(--table-font-color);
+
+}
 .table th{
     padding: 1rem 0;
     background-color: var(--primary-color);
     padding-left: 1rem;
     font-size: 1.8rem;
     color: white;
-
 }
 .table   td{
     border: 2px solid var(--table-font-color);
@@ -332,8 +346,9 @@ main section:nth-child(5) .container > div:nth-child(1){
     border-radius: 50%;
   }
 
+
+  /* list column */
 main section:nth-child(5) .container div:nth-child(2) p{
-    font-size: 1.8rem;
     font-weight: 600;
     color: var(--text-color);
 }
@@ -345,16 +360,16 @@ main section:nth-child(5) .container div:nth-child(2) label{
 main section:nth-child(5) .container div:nth-child(3){
     margin-top: 4rem;
 }
-main section:nth-child(5) .container div:nth-child(3) div:first-child{
+main section:nth-child(5) .container  div:nth-child(3) .list-col{
     border: 4px solid var(--text-color);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     padding: 2rem;
 }
 
-main section:nth-child(5) .container div:nth-child(3) div:first-child article{
+main section:nth-child(5) .container div:nth-child(3) div:first-child article , div:last-child article{
     border-bottom: 4px solid var(--text-color);
 }
-main section:nth-child(5) .container div:nth-child(3) div:first-child article p{
+main section:nth-child(5) .container div:nth-child(3) div:first-child article p ,div:last-child article p{
     margin: 2rem 0;
 }
 
@@ -369,7 +384,243 @@ main section:nth-child(5) .container div:nth-child(3) div:first-child article p{
     font-weight: 600;
     margin: 0 0.5rem;
 }
+.list{
+    margin-top: 3rem;
+}
+
+.list li{
+    list-style-image: url('./tick.png');
+    list-style-position: inside;
+    font-size: 1.5rem;
+    color: rgb(63, 60, 60);
+    font-weight: 600;
+    margin-bottom:1rem;
+}
+.list li span{
+    margin-left: 0.5rem;
+}
+
+.list-1 > li:nth-last-child(2) , .list-1 li:nth-last-child(1){
+    list-style-image: url('./cross.png');
+}
+
+main section:nth-child(5) .container div:nth-child(3)  button{ 
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: 0.4rem;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.btn-col1{
+    background-color: transparent;
+    border: 3px solid var(--text-color);
+}
+main section:nth-child(5) .container .btn-col2{
+    background-color:var(--primary-color);
+    color: white;
+    border: none;
+}
+
+/* start section  */
+
+main section:nth-child(6) .container div{
+    background-color: var(--primary-color);
+    padding: 2rem 0;
+
+    border-radius: 2rem;
+}
+
+main section:nth-child(6) .container .secondary-heading{
+    color: white;
+    margin: 2rem 0;
+}
+main section:nth-child(6) .container .btn{
+    display: inline-block;
+    background-color: white;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-color);
+    padding: 1rem 5rem;
+}
 
 
 
+/* footer section */
+footer  .ternary-heading{
+    margin-bottom: 2rem;
+}
+
+footer aside ul li{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 2rem 0;
+    margin-right: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+}
+footer aside ul li a{
+    color: white;
+}
+footer section ul li{
+    margin-bottom: 1rem;
+}
+
+
+/* responsive layout */
+
+@media screen and (max-width:1100px) {
+    html{
+        font-size: 11px;
+    }
+    .container{
+        width: 100%;
+        padding: 0 32px;
+    }
+    .hero img{
+        max-width: 100%;
+        height: auto;
+        top:20%;
+    }
+}
+
+@media screen and (max-width:769px) {
+    html{
+        font-size: 10px;
+    }
+    .container{
+        width: 100%;
+        padding: 0 2rem;
+    }
+    .width-100{
+        width: 100%;
+    }
+    .flex-wrap{
+        flex-wrap: wrap;
+    }
+    .flex-100{
+        flex:0 1 100%;
+    }
+    .text{
+        font-size: 1.2rem;
+    }
+
+    header .container ul{
+        text-align: center;
+        flex-direction: column;
+    }
+    /* hero section */
+
+    .hero{
+        height: 565px;
+        padding: 0;
+    }
+    .hero h1{
+        margin-top: 10rem;
+    }
+    .hero img{
+        max-width: 100%;
+        height: auto;
+        top:20%
+    }
+    main section:nth-child(2) .container div{
+        flex:0 1 50%;
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* graph section */
+    .graph article div:nth-child(1){
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    /* list */
+    main section:nth-child(5) .container div:nth-child(3){
+        align-items: center;
+        justify-content: center;
+    }
+    main section:nth-child(5) .container > div:nth-child(1){
+        width: 100%;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+    main .list-section .container div:nth-child(3) div{
+        flex: 0 1 80%;
+        margin-top: 3rem;
+    }
+    footer aside{
+        justify-content: center;
+        align-items: center;
+    }
+    footer section ul h3{
+        flex: 0 1 100%;
+        text-align: center;
+    }
+    footer section ul{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+    footer section ul li{
+        margin: 0 2rem ;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width:600px){
+    html{
+        font-size: 10px;
+    }
+    .container{
+        width: 100%;
+        padding:0 1rem;
+    }
+    .hero img{
+        max-width: 100%;
+        height: auto;
+        top:31%;
+    }
+}
+
+@media screen and (max-width:500px){
+    html{
+        font-size: 10px;
+    }
+    .container{
+        width: 100%;
+        padding: 0 1rem;
+    }
+    .text{
+        font-size: 1.2rem;
+    }
+    .hero{
+        height: 390px;
+    }
+    .secondary-heading{
+        font-size: 2.5rem;
+    }
+    .ternary-heading{
+        font-size: 2rem;
+    }
+    .hero h1{
+        font-size: 3rem;
+    }
+    .hero img{
+        max-width: 100%;
+        height:auto;
+        top: 35%;
+    }
+    .table thead th{
+        font-size: 1.3rem;
+    }
+
+}
 
