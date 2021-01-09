@@ -471,6 +471,13 @@ footer section ul li{
 }
 
 
+/* toggele */
+
+header #toggle, label{
+    display: none;
+}
+
+
 /* responsive layout */
 
 @media screen and (max-width:1100px) {
@@ -512,6 +519,43 @@ footer section ul li{
     header .container ul{
         text-align: center;
         flex-direction: column;
+    }
+
+    /* toggle */
+    header label{
+        display: inline-block;
+        font-size: 3rem;
+        color: white;
+        z-index: 1051;
+    }
+    header .container .logo{
+        z-index: 1051;
+        font-size: 2.5rem;
+    }
+    .nav {
+        display: none;
+    }
+    #toggle:checked ~ .nav{
+        display: inline-block;
+    }
+    .nav{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 900;
+        align-items: center;
+        padding-top: 12rem;
+        background-color: rgba(40, 62, 125, 0.7);
+    }
+    header .nav li:nth-child(n){
+        margin-bottom:2rem ;
+    }
+    header .nav li a:nth-child(n){
+        font-size: 2rem;
     }
     /* hero section */
 
