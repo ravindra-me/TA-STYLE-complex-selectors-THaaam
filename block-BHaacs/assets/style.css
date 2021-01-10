@@ -595,7 +595,7 @@ header #toggle, label{
         margin: 1.5rem 0;
     }
     main .list-section .container div:nth-child(3) div{
-        flex: 0 1 80%;
+        flex: 0 1 60%;
         margin-top: 3rem;
     }
     footer aside{
@@ -665,6 +665,9 @@ header #toggle, label{
     .table thead th{
         font-size: 1.3rem;
     }
-
+    main .list-section .container div:nth-child(3) div{
+        flex: 0 1 80%;
+        margin-top: 3rem;
+    }
 }
 
