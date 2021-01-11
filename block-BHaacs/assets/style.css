@@ -202,6 +202,10 @@ header .container .logo{
     top: 36.5%;
 }
 
+
+/* graph section */
+
+
 /* file section */
 
 main section:nth-child(2){
@@ -274,15 +278,47 @@ table caption{
 } 
 
 
+
+
+/* graph butoon */
+.graph .btn{
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius:0;
+    font-weight: 600;
+    position: relative;
+    height: 4rem;
+}
+.graph .btn:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+	border-top: 2rem solid transparent;
+	border-left: 2rem solid white;
+	border-bottom: 2rem solid transparent;
+
+}
+.graph .btn:after{
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+	border-top: 2rem solid transparent;
+	border-left: 2rem solid var(--primary-color);
+	border-bottom: 2rem solid transparent;
+}
+
 /* list section */
 
-main section:nth-child(5) .container > div:nth-child(1){
+.list-section .container > div:nth-child(1){
     width: 55%;
     text-align: center;
     margin: 1.5rem 0;
     margin: 2rem auto;
 }
-
 
 .switch {
     position: relative;
@@ -348,28 +384,29 @@ main section:nth-child(5) .container > div:nth-child(1){
 
 
   /* list column */
-main section:nth-child(5) .container div:nth-child(2) p{
+main .list-section .container > div:nth-child(2) p{
     font-weight: 600;
     color: var(--text-color);
+    font-size: 1.2rem;
 }
 
-main section:nth-child(5) .container div:nth-child(2) label{
+main .list-section .container > div:nth-child(2) label{
       margin: 0 1.5rem;
 }
 
-main section:nth-child(5) .container div:nth-child(3){
+main .list-section .container div:nth-child(3){
     margin-top: 4rem;
 }
-main section:nth-child(5) .container  div:nth-child(3) .list-col{
+main .list-section .container  div:nth-child(3) .list-col{
     border: 4px solid var(--text-color);
     border-radius: 1rem;
     padding: 2rem;
 }
 
-main section:nth-child(5) .container div:nth-child(3) div:first-child article , div:last-child article{
+main .list-section .container div:nth-child(3) div:first-child article , div:last-child article{
     border-bottom: 4px solid var(--text-color);
 }
-main section:nth-child(5) .container div:nth-child(3) div:first-child article p ,div:last-child article p{
+main .list-section .container div:nth-child(3) div:first-child article p ,div:last-child article p{
     margin: 2rem 0;
 }
 
