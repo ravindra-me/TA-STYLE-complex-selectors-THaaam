@@ -134,6 +134,7 @@ a{
     border-radius: 0.25rem;
     color: black;
     display: inline-block;
+    cursor: pointer;
 }
 .secondary-heading{
     font-size: 3rem;
@@ -201,10 +202,6 @@ header .container .logo{
     position: absolute;
     top: 36.5%;
 }
-
-
-/* graph section */
-
 
 /* file section */
 
@@ -290,6 +287,7 @@ table caption{
     font-weight: 600;
     position: relative;
     height: 4rem;
+    cursor: pointer;
 }
 .graph .btn:before{
     content: "";
@@ -452,11 +450,20 @@ main section:nth-child(5) .container div:nth-child(3)  button{
 .btn-col1{
     background-color: transparent;
     border: 3px solid var(--text-color);
+    cursor: pointer;
+}
+.btn-col1:hover{
+    background-color: var(--primary-color);
 }
 main section:nth-child(5) .container .btn-col2{
     background-color:var(--primary-color);
     color: white;
     border: none;
+}
+main section:nth-child(5) .container .btn-col2:hover{
+    background: white;
+    color: black;
+    border:2px solid var(--text-color);
 }
 
 /* start section  */
@@ -505,6 +512,9 @@ footer aside ul li a{
 }
 footer section ul li{
     margin-bottom: 1rem;
+}
+footer section ul li a{
+    color: var(--text-color);
 }
 
 
